@@ -1,114 +1,45 @@
-[![Version](https://img.shields.io/npm/v/material-components-web.svg)](https://www.npmjs.com/package/material-components-web)
-[![Build Status](https://travis-ci.com/material-components/material-components-web.svg?branch=master)](https://travis-ci.com/material-components/material-components-web/)
-[![codecov](https://codecov.io/gh/material-components/material-components-web/branch/master/graph/badge.svg)](https://codecov.io/gh/material-components/material-components-web)
-[![Chat](https://img.shields.io/discord/259087343246508035.svg)](https://discord.gg/material-components)
-[![Screenshots](https://us-central1-material-components-web.cloudfunctions.net/screenshot-shield-svg)](https://us-central1-material-components-web.cloudfunctions.net/screenshot-shield-url)
+# Material Components for the Web Codelabs
 
-# Material Components for the web
+This repository contains five codelabs for [Material Components for the Web](https://github.com/material-components/material-components-web).
 
-Material Components for the web (MDC Web) helps developers execute [Material Design](https://www.material.io).
-Developed by a core team of engineers and UX designers at Google, these components enable a reliable development workflow to build beautiful and functional web projects.
+## Introduction
 
-MDC Web strives to seamlessly incorporate into a wider range of usage contexts, from simple static websites to complex, JavaScript-heavy applications to hybrid client/server rendering systems. In short, whether you're already heavily invested in another framework or not, it should be easy to incorporate Material Components into your site in a lightweight, idiomatic fashion.
+In these codelabs, you will build a website that uses various components of Material
+Components for the Web (MDC Web). [MDC-101](https://codelabs.developers.google.com/codelabs/mdc-101-web/),
+[102](https://codelabs.developers.google.com/codelabs/mdc-102-web/), and
+[103](https://codelabs.developers.google.com/codelabs/mdc-103-web/) will guide you through building an application with MDC Web.
+[MDC-111](https://codelabs.developers.google.com/codelabs/mdc-111-web/) demonstrates incorporating MDC Web into an existing application.
+[MDC-112](https://codelabs.developers.google.com/codelabs/mdc-112-web/) guides you through integrating MDC Web with other web frameworks.
 
-Material Components for the web is the successor to [Material Design Lite](https://getmdl.io/). In addition to implementing the [Material Design guidelines](https://material.io/design), it provides more flexible theming customization, not only in terms of color, but also typography, shape, states, and more. It is also specifically [architected](docs/code/architecture.md) for adaptability to various [major web frameworks](docs/framework-wrappers.md).
+## Support
 
-> NOTE: Material Components Web tends to release breaking changes on a monthly basis, but follows
-> [semver](https://semver.org/) so you can control when you incorporate them.
-> We typically follow a 2-week release schedule which includes one major release per month with breaking changes,
-> and intermediate patch releases with bug fixes.
+If you've found an error in these Codelabs, please file an issue on [GitHub](https://github.com/material-components/material-components-web-codelabs/issues).
 
-## Important links
+For questions regarding Material Components for the Web, please file an issue [here](https://github.com/material-components/material-components-web/issues).
 
-- [Getting Started Guide](docs/getting-started.md)
-- [Demos](https://material-components.github.io/material-components-web-catalog)
-- [MDC Web on other frameworks](docs/framework-wrappers.md)
-- [Examples using MDC Web](docs/examples.md)
-- [Contributing](CONTRIBUTING.md)
-- [Material Design Guidelines](https://material.io/design) (external site)
-- [Supported browsers](docs/supported-browsers.md)
-- [All Components](packages/)
-- [Changelog](./CHANGELOG.md)
-- [Roadmap](./ROADMAP.md)
+Patches are encouraged, and may be submitted by forking this project and
+submitting a pull request through GitHub.
 
-## Quick start
+## License
 
-### Using via CDN
+The MIT License
 
-```html
-<!-- Required styles for MDC Web -->
-<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+Copyright (c) 2018 Google, Inc.
 
-<!-- Render textfield component -->
-<div class="mdc-text-field">
-  <input type="text" id="my-text-field" class="mdc-text-field__input">
-  <label class="mdc-floating-label" for="my-text-field">Label</label>
-  <div class="mdc-line-ripple"></div>
-</div>
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-<!-- Required MDC Web JavaScript library -->
-<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-<!-- Instantiate single textfield component rendered in the document -->
-<script>
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
-</script>
-```
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-> Please see [quick start demo](https://codepen.io/abhiomkar/pen/gQWarJ) on codepen for full example.
-
-### Using NPM
-
-> This guide assumes you have webpack configured to compile Sass into CSS. To configure webpack, please see the full [getting started guide](docs/getting-started.md). You can also see the final code and result in the [Material Starter Kit](https://glitch.com/~material-starter-kit).
-
-Install textfield node module to your project.
-
-```
-npm install @material/textfield
-```
-
-#### HTML
-
-Sample usage of text field component. Please see [MDC Textfield](packages/mdc-textfield) component page for more options.
-
-```html
-<div class="mdc-text-field">
-  <input type="text" id="my-text-field" class="mdc-text-field__input">
-  <label class="mdc-floating-label" for="my-text-field">Label</label>
-  <div class="mdc-line-ripple"></div>
-</div>
-```
-
-#### CSS
-
-Load styles required for text field component.
-
-```scss
-@import "@material/textfield/mdc-text-field";
-```
-
-#### JavaScript
-
-Import `MDCTextField` module to instantiate text field component.
-
-```js
-import {MDCTextField} from '@material/textfield/index';
-const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
-```
-
-This'll initialize text field component on a single `.mdc-text-field` element.
-
-> Please see [quick start demo](https://glitch.com/~mdc-web-quick-start) on glitch for full example.
-
-## Need help?
-
-We're constantly trying to improve our components. If Github Issues don't fit your needs, then please visit us on our [Discord Channel](https://discord.gg/material-components).
-
-## Thank you
-
-Third-party services that we use and are thankful to:
-
-- [Travis CI](https://travis-ci.com/) for CI.
-- [Sauce Labs](https://saucelabs.com/) for unit testing.
-- [CrossBrowserTesting](https://crossbrowsertesting.com/) for [screenshot testing](test/screenshot/).
-
-<a href="https://crossbrowsertesting.com/"><img src="test/screenshot/static/images/cbt-logo.png" alt="CrossBrowserTesting logo" width="180" /></a>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

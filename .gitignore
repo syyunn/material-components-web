@@ -1,25 +1,3 @@
-# macOS filesystem
 .DS_Store
-
-# Editors and IDEs
-.idea/
-.vscode/
-
-# Generated files
-*.log
-*.sw*
-node_modules/
-
-# Build output
-/build/
-/coverage/
-packages/*/dist
-packages/**/*.js
-packages/**/*.d.ts
-packages/**/*.map
-
-# Material.io site generator test (`npm run test:site`)
-.site-generator-tmp/
-
-# Used by internal sync & rewrite scripts
-.rewrite-tmp/
+node_modules
+.idea
